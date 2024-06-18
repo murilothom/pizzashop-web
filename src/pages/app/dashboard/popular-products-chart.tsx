@@ -20,14 +20,6 @@ import {
 
 import { getPopularProducts } from '../../../api/get-popular-products'
 
-const data = [
-  { product: 'Pepperoni', amount: 17 },
-  { product: 'Mussarela', amount: 20 },
-  { product: 'Lombo c/ abacaxi', amount: 37 },
-  { product: 'Strogonoff', amount: 58 },
-  { product: '4 queijos', amount: 44 },
-]
-
 const COLORS = [
   colors.sky[500],
   colors.amber[500],
