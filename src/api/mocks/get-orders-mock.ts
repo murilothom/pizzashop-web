@@ -12,7 +12,7 @@ const statuses: OrderStatus[] = [
   'processing',
 ]
 
-const orders: Orders = Array.from({ length: 60 }).map((_, index) => {
+export const ordersMock: Orders = Array.from({ length: 60 }).map((_, index) => {
   return {
     orderId: `order-${index + 1}`,
     customerName: `customer-${index + 1}`,
@@ -35,7 +35,7 @@ export const getOrdersMock = http.get<never, never, GetOrdersResponse>(
     const customerName = searchParams.get('customerName')
     const status = searchParams.get('status')
 
-    let filteredOrders = orders
+    let filteredOrders = ordersMock
 
     if (customerName) {
       filteredOrders = filteredOrders.filter((order) =>
